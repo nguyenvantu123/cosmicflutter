@@ -29,7 +29,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   alignment: Alignment.bottomCenter,
                   child: Image.asset(
                     "assets/images/logo.png",
-                    height: 30,
+                    width: 213.915,
+                    height: 76.064,
                   ),
                 ),
               ],
