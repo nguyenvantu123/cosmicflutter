@@ -35,6 +35,20 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ],
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Image.asset(
+                    "assets/images/flutter_logo.png",
+                    width: 111,
+                    height: 32,
+                  ),
+                ),
+              ],
+            )
           ],
         ) /* add child content here */,
       ),
