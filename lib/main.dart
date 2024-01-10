@@ -1,3 +1,4 @@
+import 'package:cosmic/login_screen.dart';
 import 'package:cosmic/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       //   // is not restarted.
       //   primarySwatch: Colors.blue,
       // ),
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }
