@@ -1,3 +1,5 @@
+import 'package:cosmic/custom_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -7,9 +9,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passController = TextEditingController();
-
   @override
   void initState() {
     super.initState();
@@ -52,26 +51,26 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(
+                  Padding(
+                    padding: const EdgeInsets.only(
                         right: 50, left: 50, bottom: 50, top: 30),
                     child: Column(
                       textDirection: TextDirection.ltr,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'Login',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 27,
+                            fontSize: 13,
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        TextField(
+                        const TextField(
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Color(0xFF393939),
@@ -83,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             labelText: 'Email',
                             labelStyle: TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 15,
+                              fontSize: 13,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
                             ),
@@ -105,10 +104,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        TextField(
+                        const TextField(
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Color(0xFF393939),
@@ -120,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             labelText: 'Password',
                             labelStyle: TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 15,
+                              fontSize: 13,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
                             ),
@@ -141,6 +140,125 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: const Text(
+                            'Forgot password',
+                            style: TextStyle(
+                              color: Color(0xFF755DC1),
+                              fontSize: 13,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        ClipRRect(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
+                          child: SizedBox(
+                            width: 329,
+                            height: 56,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFF9F7BFF),
+                              ),
+                              child: const Text(
+                                'Sign In',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'or sign in with',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                              icon: const FaIcon(FontAwesomeIcons.facebook),
+                              onPressed: () {
+                                print("Pressed");
+                              },
+                              color: Colors.white,
+                            ),
+                            IconButton(
+                              // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                              icon: const FaIcon(FontAwesomeIcons.twitter),
+                              onPressed: () {
+                                print("Pressed");
+                              },
+                              color: Colors.white,
+                            ),
+                            IconButton(
+                              // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                              icon: const FaIcon(FontAwesomeIcons.google),
+                              onPressed: () {
+                                print("Pressed");
+                              },
+                              color: Colors.white,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              'Don’t have an account?',
+                              style: TextStyle(
+                                color: Color(0xFF837E93),
+                                fontSize: 13,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 2.5,
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: const Text(
+                                'Sign Up',
+                                style: TextStyle(
+                                  color: Color(0xFF755DC1),
+                                  fontSize: 13,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
