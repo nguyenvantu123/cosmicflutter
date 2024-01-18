@@ -185,9 +185,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Row(
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Text(
                               'or sign in with',
                               style: TextStyle(
@@ -208,25 +208,19 @@ class _LoginScreenState extends State<LoginScreen> {
                             IconButton(
                               // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
                               icon: const FaIcon(FontAwesomeIcons.facebook),
-                              onPressed: () {
-                                print("Pressed");
-                              },
+                              onPressed: () {},
                               color: Colors.white,
                             ),
                             IconButton(
                               // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
                               icon: const FaIcon(FontAwesomeIcons.twitter),
-                              onPressed: () {
-                                print("Pressed");
-                              },
+                              onPressed: () {},
                               color: Colors.white,
                             ),
                             IconButton(
                               // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
                               icon: const FaIcon(FontAwesomeIcons.google),
-                              onPressed: () {
-                                print("Pressed");
-                              },
+                              onPressed: () {},
                               color: Colors.white,
                             ),
                           ],
