@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+
+import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -7,19 +11,32 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
+class _SplashScreenState extends State<SplashScreen> {
+  //   with SingleTickerProviderStateMixin {
+  // late AnimationController _controller;
+
+  startSplashScreenTimer() async {
+    const duration = Duration(seconds: 5);
+    return Timer(duration, navigationToNextPage);
+  }
+
+  void navigationToNextPage() {
+    Navigator.of(context, rootNavigator: true).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => const LoginScreen(),
+      ),
+    );
+  }
 
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this);
+
+    startSplashScreenTimer();
   }
 
   @override
   void dispose() {
-    _controller.dispose();
     super.dispose();
   }
 
@@ -123,3 +140,4 @@ class _SplashScreenState extends State<SplashScreen>
     ));
   }
 }
+// }
